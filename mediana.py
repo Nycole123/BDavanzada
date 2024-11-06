@@ -18,6 +18,6 @@ data = [("Alex", 20), ("Luisa", 18), ("Carlos", 15), ("Lucas", 14), ("Sara", 18)
 columns = ["Nombre", "Notas"]
 variable = spark.createDataFrame(data, columns)
 
-var_mediana = variable.approxQuantile("Edad", [0.5], 0.0)
+var_mediana = variable.approxQuantile("Notas", [0.5], 0.0)
 
 print("La mediana es:", var_mediana)
