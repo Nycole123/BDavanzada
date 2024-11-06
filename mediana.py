@@ -15,7 +15,7 @@ spark = SparkSession.builder.appName("Notas de estudiantes").getOrCreate()
 spark
 
 data = [("Alex", 20), ("Luisa", 18), ("Carlos", 15), ("Lucas", 14), ("Sara", 18),("Aron", 16),("Camila", 13),("Susana", 19),("Alfredo", 5),("Alonso", 11),("Karen", 9),("Alexa", 8),("Hellen", 2),("Mauricio", 6),("Luciana", 12),("Jacob", 18),("Estefani", 19),("Daniela", 17)]
-columns = ["Nombre", "Edad"]
+columns = ["Nombre", "Notas"]
 variable = spark.createDataFrame(data, columns)
 
 var_mediana = variable.approxQuantile("Edad", [0.5], 0.0)
